@@ -1,0 +1,24 @@
+
+
+nav{
+    display: flex;
+    flex-direction: row;
+    
+}
+a {
+
+    display: block;
+    color: rgb(211, 2, 2);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+a:hover {
+    background-color: #ddd;
+    color: black;
+}
+li{
+    text-decoration: none;
+    list-style-type: none;
+    margin: 0 10px
+}
