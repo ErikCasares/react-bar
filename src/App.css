@@ -37,7 +37,9 @@
   justify-content: space-around;
   font-weight: bold;
 }
-
+.noticias{
+  background-color: #e0e0e0;
+}
 .card {
   padding: 2em;
   margin: 5px;

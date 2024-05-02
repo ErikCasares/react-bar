@@ -41,9 +41,9 @@ return (
         Noticias
       </Button>
 
-      <Offcanvas show={show} onHide={handleClose}>
+      <Offcanvas className="noticias" show={show} onHide={handleClose}>
         <Offcanvas.Header closeButton>
-          <Offcanvas.Title>Offcanvas</Offcanvas.Title>
+          <Offcanvas.Title><h2>Noticias</h2></Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
           <Noticias />
