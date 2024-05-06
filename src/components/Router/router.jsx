@@ -12,6 +12,8 @@ import { useState } from 'react'
 import { useEffect } from 'react'
 import LandingPage from '../LandingPage'
 import Reservas from '../Reservas'
+
+import ReservationForm from '../ReservationFlow/ReservationForm'
 export default function Router() {
 
     return(
@@ -22,6 +24,7 @@ export default function Router() {
                 <Route path="/category/:id" element={<ProductItem/>}/>
                 <Route path="/" element={<LandingPage/>}/>
                 <Route path="/reservas" element={<Reservas/>}/>
+                <Route path="/reservas2" element={<ReservationForm/>}/>
             </Routes>
         </BrowserRouter>
     )

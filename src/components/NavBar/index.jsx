@@ -36,6 +36,7 @@ return (
 			<Nav.Link as ={Link} to="category/drink">Drinks</Nav.Link>
 			<Nav.Link as ={Link} to="category/cocktail">Cocktails</Nav.Link>
 			<Nav.Link as ={Link} to="reservas">Reservas</Nav.Link>
+			<Nav.Link as ={Link} to="reservas2">Reservassssss</Nav.Link>
 		</Nav>
 		<Button variant="secondary" onClick={handleShow}>
         Noticias
