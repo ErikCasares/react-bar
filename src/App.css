@@ -67,6 +67,11 @@ body {
   background-image: url(/cocteles.jpg);
 }
 
+.controls{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
 
 
 
@@ -80,8 +85,8 @@ body {
   flex-direction: column;
 }
 .cantidad-personas{
-  display: grid;
-
+  display: flex;
+    justify-content: space-evenly;
 }
 .opcion {
   border: 2px solid #ccc;
@@ -94,7 +99,17 @@ body {
   margin-right: 10px;
   cursor: pointer;
 }
-
+.opcionNull{
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.preferencia{
+  width: 60px;
+}
 .opcion.seleccionada {
   background-color: #000000;
   color: #fff;

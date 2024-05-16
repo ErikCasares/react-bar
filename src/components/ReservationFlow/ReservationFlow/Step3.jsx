@@ -30,19 +30,19 @@ console.log(cantidadPersonas)
 <div className="cantidad-personas-selector">
   <div className='cantidad-personas'>
   <div
-        className={`col opcion${cantidadSeleccionada === 2 ? ' seleccionada' : ''}`}
+        className={` opcion${cantidadSeleccionada === 2 ? ' seleccionada' : ''}`}
         onClick={() => handleSelect(2)}
       >
         2
       </div>
       <div
-        className={`col opcion${cantidadSeleccionada === 3 ? ' seleccionada' : ''}`}
+        className={` opcion${cantidadSeleccionada === 3 ? ' seleccionada' : ''}`}
         onClick={() => handleSelect(3)}
       >
         3
       </div>
       <div
-        className={`col opcion${cantidadSeleccionada === 4 ? ' seleccionada' : ''}`}
+        className={`opcion${cantidadSeleccionada === 4 ? ' seleccionada' : ''}`}
         onClick={() => handleSelect(4)}
       >
         4
@@ -55,7 +55,7 @@ console.log(cantidadPersonas)
       >
         1
       </div>
-      <div></div>
+      <div className={`opcionNull`}></div>
       <div
         className={`opcion${cantidadSeleccionada === 'mas' ? ' seleccionada' : ''}`}
         onClick={() => handleSelect('mas')}
@@ -66,8 +66,10 @@ console.log(cantidadPersonas)
 
       
     </div>
-    <Button variant="dark" type="submit">Siguiente</Button>
-      <Button variant="dark" onClick={prevStep}>Volver</Button>{' '}
+    <div className='controls'>
+    <Button variant="danger" onClick={prevStep}>Volver</Button>{' '}
+      <Button variant="dark" type="submit">Siguiente</Button>
+    </div>
       </Form>
     </>
   );

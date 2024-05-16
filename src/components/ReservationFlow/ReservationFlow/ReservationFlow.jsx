@@ -3,6 +3,7 @@ import Step1 from './Step1';
 import Step2 from './Step2';
 import Step3 from './Step3';
 import Step4 from './Step4';
+import Step5 from './Step5';
 import ConfirmationStep from './ConfirmationStep';
 
 const ReservationFlow = () => {
@@ -14,6 +15,8 @@ const ReservationFlow = () => {
     telefono: '',
     cantidadPersonas: '',
     preferencias: '',
+    dia:'',
+    hora:'',
   });
 
   const nextStep = () => {
@@ -23,6 +26,10 @@ const ReservationFlow = () => {
   const prevStep = () => {
     setCurrentStep(currentStep - 1);
   };
+  
+  const resetStep = () => {
+    setCurrentStep(currentStep - 3)
+  }
 
   const saveReservationData = (data) => {
     setReservationData({ ...reservationData, ...data });
@@ -37,9 +44,11 @@ const ReservationFlow = () => {
     case 3:
       return <Step3 nextStep={nextStep} prevStep={prevStep} saveReservationData={saveReservationData} />;
     case 4:
-      return <Step4 nextStep={nextStep} prevStep={prevStep} saveReservationData={saveReservationData} />;
+      return <Step4 resetStep={resetStep} prevStep={prevStep} saveReservationData={saveReservationData} reservationData={reservationData} />;
     case 5:
-      return <ConfirmationStep prevStep={prevStep} reservationData={reservationData} />;
+      return <Step5 resetStep={resetStep} prevStep={prevStep} saveReservationData={saveReservationData} reservationData={reservationData} />;
+    case 6:
+      return   <ConfirmationStep prevStep={prevStep} reservationData={reservationData} />;
     default:
       return null;
   }

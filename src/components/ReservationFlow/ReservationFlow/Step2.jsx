@@ -39,8 +39,10 @@ const Step2 = ({ prevStep, nextStep, saveReservationData }) => {
       >
         <Form.Control type="text" placeholder="name@example.com"  value={telefono} onChange={handleTelefonoChange} required />
       </FloatingLabel>
-      <Button variant="danger" onClick={prevStep}>Volver</Button>{' '}
+      <div className='controls'>
+    <Button variant="danger" onClick={prevStep}>Volver</Button>{' '}
       <Button variant="dark" type="submit">Siguiente</Button>
+    </div>
 
     </Form>
   );
